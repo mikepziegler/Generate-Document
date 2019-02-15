@@ -1,0 +1,30 @@
+{
+  "name": "generate-document",
+  "version": "1.0.0",
+  "description": "A npm tool for documenting web projects",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc",
+    "test": "",
+    "linking": "tsc && link"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miZye/Generate-Document.git"
+  },
+  "keywords": [
+    "Documentation"
+  ],
+  "author": "Mike Zyeman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miZye/Generate-Document/issues"
+  },
+  "homepage": "https://github.com/miZye/Generate-Document#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "lodash": "^4.17.11",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.3"
+  }
+}
