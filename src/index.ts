@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 
-class ClassName {
+class GenerateDocument {
 
     text: string;
 
@@ -18,4 +18,4 @@ class ClassName {
     }
 }
 
-export = ClassName;
+export = GenerateDocument;
