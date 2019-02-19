@@ -6,4 +6,4 @@ class Server {
     startServer() {
     }
 }
-exports.default = Server;
+exports.Server = Server;

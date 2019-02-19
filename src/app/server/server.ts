@@ -1,4 +1,4 @@
-//import Program from 'commander';
+import Program from 'commander';
 
 export class Server {
 

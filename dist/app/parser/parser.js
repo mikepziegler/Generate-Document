@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-class Application {
+class Parser {
     constructor() {
-        this.init();
     }
-    init() {
+    getElements() {
     }
 }
+exports.Parser = Parser;

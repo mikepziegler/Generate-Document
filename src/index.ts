@@ -1,21 +1,50 @@
-import chalk from 'chalk';
+#!/usr/bin/env node
 
-class GenerateDocument {
+import program from 'commander';
+let pkg = require('../package.json');
 
-    text: string;
+import { Application } from './app/application'
+import chalk from "chalk";
 
-    constructor(Text: string) {
-        console.log(Text);
-        this.text = Text;
-    }
+const app = new Application();
 
-    getText(): string {
-        return this.text;
-    }
 
-    getBlueText() {
-        console.log(chalk.blue(this.text))
-    }
-}
+program
+    .version(pkg.version)
+    //Information
+    .option('-i, --information',
+        'Gets information from project/srcPath for language, framework, package.json and tags in directory')
 
-export = GenerateDocument;
+    //Hosting
+    .option('-S, --server',
+        'Creates a server on localhost (default port: 5200) ' +
+        'which displays the documentation')
+
+    //Configuration
+    .option('-C, --configuration [configuration]',
+        'Fetches the current configuration')
+
+    //Options
+
+    .option('--port [port]', 'sets port for hosted server');
+
+program.command('gen')
+    .option('-o, --output [outDir]', 'sets output path to generate document there')
+    .option('-s, --source [srcDir]', 'sets source path as an input')
+    .action((program) => {
+
+        console.log("hi");
+
+        let source = process.cwd();
+        let output = '';
+
+        if (program.source) source = program.source;
+        if (program.output) output = program.output;
+
+        app.generate(source, output);
+    });
+
+program.parse(process.argv);
+
+if (program.check) console.log('-c or --check');
+if (program.server) console.log('-S or --server');

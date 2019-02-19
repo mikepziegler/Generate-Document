@@ -47,3 +47,4 @@ npm install -g generate-document
 - build a website with templates
 - support for frameworks like Angular / React / Vue 
 - including external html, css and js scripts.
+
